@@ -4,11 +4,12 @@
 from numbers import Number
 
 def fizz(x):
-  """Checks to see if the input is a multiple of 3"""
-  # check to see if the input is a number
-  if isinstance(x, Number):
-    # why yes, it is a number
-    return x % 3 == 0
+  """
+    Checks to see if the input `x` is numeric and a multiple of 3.
+    If it is, it outputs 'fizz'.
+    Otherwise, it outputs the input.
+  """
+  if isinstance(x, Number) and x % 3 == 0:
+    return 'fizz'
   else:
-    # nope, it is NOT a number
-    return False
+    return x
