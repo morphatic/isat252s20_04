@@ -26,3 +26,17 @@ def fibu(x):
     Otherwise, it outputs the input.
   """
   return 'FizzBuzz' if isinstance(x, Number) and x % 15 == 0 else x
+
+def play(start, end):
+  """
+    Given a start number and an end number, play FizzBuzz
+    starting at `start` and ending at `end` and output
+    the results as a list (array).
+  """
+  # initialize an empty collection to hold our output
+  output = []
+  # loop through the numbers from start to end
+  for x in range(start, end + 1):
+    output.append(buzz(fizz(fibu(x))))
+  # return the output
+  return output

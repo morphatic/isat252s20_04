@@ -2,7 +2,7 @@
 """Unit tests for FizzBuzz."""
 
 # import the code to be tested
-from fizzbuzz import fizz, buzz, fibu
+from fizzbuzz import fizz, buzz, fibu, play
 
 # import utilities for writing tests
 from pytest import raises
@@ -86,4 +86,9 @@ def describe_a_fizzbuzz_program_that():
       assert fibu('Fizz') == 'Fizz'  # non-numeric
 
   def can_play_fizzbuzz():
-    assert play(1, 15) == [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'FizzBuzz']
+    assert play(1, 15) == [
+      1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'FizzBuzz'
+    ]
+    assert play(3, 17) == [
+      'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'FizzBuzz', 16, 17
+    ]
